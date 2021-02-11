@@ -9,14 +9,12 @@ import {
   MenuTrigger,
 } from 'react-native-popup-menu';
 import styles from './navDrawerHeaderStyle';
-import NavIcon from '../../assets/icons/menu-icon.png';
-import Logo from '../../assets/images/logo-modified.png';
-import {AuthContext} from '../../context';
+import NavIcon from '../../assets/menu-icon.png';
+import Logo from '../../assets/logo.png';
 import {getScreenParent} from '../../utils/navigationHelper';
 import {navigateToNestedRoute} from '../../navigators/RootNavigation';
 
 export function NavDrawerHeader({navigation}) {
-  const {state, dispatch} = useContext(AuthContext);
 
   const handleToggleNavDrawer = () => {
     navigation?.openDrawer();

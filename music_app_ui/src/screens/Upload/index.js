@@ -10,7 +10,7 @@ import {
   ScrollView,
 } from 'react-native';
 import {MaterialIcons} from 'react-native-vector-icons';
-import styles from './appStyle';
+import styles from './uploadStyle.js';
 import {CustomText} from './components';
 
 export function Upload({navigation}) {
