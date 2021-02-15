@@ -9,10 +9,32 @@ const styles = StyleSheet.create({
     height: '100%',
     padding: 16,
   },
+  headerContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 40,
+    alignItems: 'center'
+  },
+  profilePhotoImage: {
+    height: 40,
+    width: 40,
+    borderRadius: 5,
+  },
+  nameContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginBottom: 3,
+  },
+  nameText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
   usernameText: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 15,
+    opacity: 0.7,
+    marginLeft: 5,
   },
   learnText: {
     fontSize: 16,

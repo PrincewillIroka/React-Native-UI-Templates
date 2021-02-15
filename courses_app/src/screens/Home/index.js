@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ScrollView,
   ImageBackground,
+  Image,
 } from 'react-native';
 import shortid from 'shortid';
 import styles from './homeStyle.js';
@@ -13,6 +14,8 @@ import UXImage from '../../assets/illustrations/3647007.png';
 import PSImage from '../../assets/illustrations/4991639.png';
 import DVImage from '../../assets/illustrations/9814.png';
 import IlImage from '../../assets/illustrations/Wavy_Bus-35_Single-03.png';
+import FriesMenu from '../../assets/icons/FriesMenu.png';
+import ProfilePhoto from '../../assets/photos/photo-1494790108377-be9c29b29330.jpg';
 
 export function Home() {
   const courses = [
@@ -47,7 +50,7 @@ export function Home() {
   ];
 
   const [state, setState] = useState({
-    username: 'Ramjan',
+    username: 'Georgina',
     tabs: ['New', 'Trendy', 'Best rated'],
     activeTab: 'New',
     displayedCourses: courses,
@@ -91,7 +94,14 @@ export function Home() {
   return (
     <View style={styles.homeContainer}>
       <View style={styles.homeContent}>
-        <Text style={styles.usernameText}>Hey {state?.username}</Text>
+        <View style={styles.headerContainer}>
+          <Image source={FriesMenu} />
+          <Image source={ProfilePhoto} style={styles.profilePhotoImage} />
+        </View>
+        <View style={styles.nameContainer}>
+          <Text style={styles.nameText}>Hi</Text>
+          <Text style={styles.usernameText}>{state?.username}</Text>
+        </View>
         <Text style={styles.learnText}>Learn new Skills today!</Text>
         <View style={styles.searchContainer}>
           <TextInput />
