@@ -1,27 +1,20 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Home} from '../screens';
+import {Home, CoursesList} from '../screens';
 
 const Stack = createStackNavigator();
 
-const SingleStack = () => {
+function AppStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Home">
       <Stack.Screen
         name="Home"
         component={Home}
         options={{headerShown: false}}
       />
-    </Stack.Navigator>
-  );
-};
-
-function AppStack() {
-  return (
-    <Stack.Navigator initialRouteName="SingleStack">
       <Stack.Screen
-        name="SingleStack"
-        component={SingleStack}
+        name="CoursesList"
+        component={CoursesList}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

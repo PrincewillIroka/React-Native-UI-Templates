@@ -69,7 +69,11 @@ const styles = StyleSheet.create({
   tabHeaderContainer: {
     display: 'flex',
     flexDirection: 'row',
-    marginBottom: 40,
+    marginBottom: 20,
+  },
+  scrollViewContent:{
+    paddingTop: 10,
+    paddingBottom: 40
   },
   singleTab: {
     marginRight: 20,

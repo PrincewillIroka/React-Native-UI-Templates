@@ -12,14 +12,11 @@ import shortid from 'shortid';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import styles from './homeStyle.js';
-import UXImage from '../../assets/illustrations/3647007.png';
-import PSImage from '../../assets/illustrations/4991639.png';
-import DVImage from '../../assets/illustrations/9814.png';
-import IlImage from '../../assets/illustrations/Wavy_Bus-35_Single-03.png';
 import FriesMenu from '../../assets/icons/FriesMenu.png';
 import ProfilePhoto from '../../assets/photos/photo-1494790108377-be9c29b29330.jpg';
+import {getIllustration, getBackground} from '../../utils';
 
-export function Home() {
+export function Home({navigation}) {
   const courses = [
     {
       id: 0,
@@ -58,26 +55,6 @@ export function Home() {
     displayedCourses: courses,
   });
 
-  const getBackgroundByIndex = (id) => {
-    return id === 0
-      ? styles.bg0
-      : id === 1
-      ? styles.bg1
-      : id === 2
-      ? styles.bg2
-      : styles.bg3;
-  };
-
-  const getIllustration = (id) => {
-    return id === 0
-      ? UXImage
-      : id === 1
-      ? PSImage
-      : id === 2
-      ? IlImage
-      : DVImage;
-  };
-
   const handleTabPress = (tab, index) => {
     let {activeTab, displayedCourses} = state;
     activeTab = tab;
@@ -91,6 +68,10 @@ export function Home() {
     }
 
     setState({...state, activeTab, displayedCourses});
+  };
+
+  const handleNavigation = (route, params) => {
+    navigation?.navigate(route, params);
   };
 
   return (
@@ -152,8 +133,9 @@ export function Home() {
                   index % 2
                     ? styles.courseLongHeight
                     : styles.courseShortHeight,
-                  getBackgroundByIndex(course?.id),
-                ]}>
+                  getBackground(course?.id),
+                ]}
+                onPress={() => handleNavigation('CoursesList', course)}>
                 <ImageBackground
                   source={getIllustration(course?.id)}
                   style={styles.illustrationImage}
