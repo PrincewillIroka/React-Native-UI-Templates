@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 40,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   profilePhotoImage: {
     height: 40,
@@ -42,11 +42,29 @@ const styles = StyleSheet.create({
     opacity: 0.6,
   },
   searchContainer: {
-    height: 40,
     borderColor: '#ddd',
     borderWidth: 1,
     marginBottom: 30,
     borderRadius: 5,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 5,
+  },
+  searchInput: {
+    height: 40,
+    fontSize: 15,
+    marginLeft: 5,
+    width: '80%',
+  },
+  dropdownContainer: {
+    borderLeftColor: '#ddd',
+    borderLeftWidth: 1,
+    height: 40,
+    width: 40,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   tabHeaderContainer: {
     display: 'flex',

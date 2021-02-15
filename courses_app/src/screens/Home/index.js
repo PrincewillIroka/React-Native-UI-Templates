@@ -9,6 +9,8 @@ import {
   Image,
 } from 'react-native';
 import shortid from 'shortid';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import styles from './homeStyle.js';
 import UXImage from '../../assets/illustrations/3647007.png';
 import PSImage from '../../assets/illustrations/4991639.png';
@@ -104,7 +106,18 @@ export function Home() {
         </View>
         <Text style={styles.learnText}>Learn new Skills today!</Text>
         <View style={styles.searchContainer}>
-          <TextInput />
+          <Ionicons name="search" size={23} color="#808080" />
+          <TextInput
+            placeholder="Search for a course"
+            style={styles.searchInput}
+          />
+          <TouchableOpacity style={styles.dropdownContainer}>
+            <MaterialIcons
+              name="keyboard-arrow-down"
+              size={23}
+              color="#808080"
+            />
+          </TouchableOpacity>
         </View>
         <View style={styles.tabHeaderContainer}>
           {state?.tabs?.map((tab, index) => (
@@ -127,7 +140,9 @@ export function Home() {
             </TouchableOpacity>
           ))}
         </View>
-        <ScrollView style={styles.scrollViewContent}>
+        <ScrollView
+          style={styles.scrollViewContent}
+          showsVerticalScrollIndicator={false}>
           <View style={styles.tabBodyContainer}>
             {state?.displayedCourses?.map((course, index) => (
               <TouchableOpacity
