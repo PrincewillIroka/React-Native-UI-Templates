@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@react-native-community/masked-view": "^0.1.10",
-    "react-native-popup-menu": "^0.15.10"
-  }
-}
