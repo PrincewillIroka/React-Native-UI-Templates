@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   tabHeaderContainer: {
     display: 'flex',
     flexDirection: 'row',
+    marginBottom: 40,
   },
   singleTab: {
     marginRight: 20,
@@ -55,6 +56,53 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  courseContainer: {
+    width: '43%',
+    borderRadius: 12,
+    marginBottom: 30,
+  },
+  courseShortHeight: {
+    height: 160,
+  },
+  courseLongHeight: {
+    height: 200,
+  },
+  courseTitletext: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    opacity: 0.9,
+  },
+  courseNumbertext: {
+    fontSize: 13,
+  },
+  illustrationImage: {
+    flex: 1,
+    position: 'relative',
+    borderRadius: 10,
+    width: '100%',
+  },
+  backgroundStyle: {
+    resizeMode: 'cover',
+    position: 'absolute',
+    top: 55,
+  },
+  transparentBg: {
+    paddingTop: 10,
+    paddingHorizontal: 10,
+  },
+  bg0: {
+    backgroundColor: '#FDAAB0',
+  },
+  bg1: {
+    backgroundColor: '#E296DE',
+  },
+  bg2: {
+    backgroundColor: '#9E7CF4',
+  },
+  bg3: {
+    backgroundColor: '#96D8CA',
   },
 });
 
