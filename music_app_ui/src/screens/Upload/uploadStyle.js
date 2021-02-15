@@ -14,7 +14,6 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   layoutContent: {
-    marginTop: 40,
     display: 'flex',
   },
   uploadSingleSongText: {
@@ -37,6 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#222225',
     height: 280,
     marginTop: 40,
+    borderRadius: 5,
   },
 });
 

@@ -52,13 +52,13 @@ function AppStack() {
   return (
     <Stack.Navigator initialRouteName="DrawerStack">
       <Stack.Screen
-        name="SingleStack"
-        component={SingleStack}
+        name="DrawerStack"
+        component={DrawerStack}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="DrawerStack"
-        component={DrawerStack}
+        name="SingleStack"
+        component={SingleStack}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

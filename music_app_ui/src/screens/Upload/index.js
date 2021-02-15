@@ -1,24 +1,17 @@
 import * as React from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  Pressable,
-  Image,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-  ScrollView,
-} from 'react-native';
-import {MaterialIcons} from 'react-native-vector-icons';
+import {View, TouchableOpacity, ScrollView} from 'react-native';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import styles from './uploadStyle.js';
-import {CustomText} from './components';
+import {CustomText} from '../../components';
+import {NavDrawerHeader} from '../../components';
 
 export function Upload({navigation}) {
   return (
     <View style={styles.uploadContainer}>
+      <NavDrawerHeader navigation={navigation} />
       <ScrollView style={styles.scrollViewContent}>
         <View style={styles.layoutContent}>
-          <View style={styles.singleCard}>
+          <TouchableOpacity style={styles.singleCard}>
             <View style={styles.iconWrapper}>
               <MaterialIcons name="music-note" color="#fff" size={30} />
             </View>
@@ -27,8 +20,8 @@ export function Upload({navigation}) {
               text="Upload single song"
               style={styles.uploadSingleSongText}
             />
-          </View>
-          <View style={styles.singleCard}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.singleCard}>
             <View style={styles.iconWrapper}>
               <MaterialIcons name="library-music" color="#fff" size={30} />
             </View>
@@ -37,7 +30,7 @@ export function Upload({navigation}) {
               text="Upload an album"
               style={styles.uploadSingleSongText}
             />
-          </View>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>

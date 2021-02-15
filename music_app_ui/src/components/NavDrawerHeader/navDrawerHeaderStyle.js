@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   navIconImage: {
     height: 25,
     width: 25,
+    resizeMode: 'cover',
   },
   logoContainer: {
     width: 107,
@@ -22,7 +23,6 @@ const styles = StyleSheet.create({
     width: 120,
     height: 40,
     resizeMode: 'contain',
-    marginLeft: 10,
     zIndex: 1,
   },
   controlIcons: {

@@ -1,10 +1,7 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
+import {CustomText} from '../../components';
 
 export function Track() {
-  return (
-    <View>
-      <Text>Track</Text>
-    </View>
-  );
+  return <Text>Hello</Text>;
 }
