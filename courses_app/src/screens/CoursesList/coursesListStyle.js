@@ -46,14 +46,15 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     fontWeight: 'bold',
     fontSize: 16,
-    marginBottom: 30,
+    marginBottom: 15,
   },
   scrollViewContent: {
-    paddingTop: 10,
-    paddingBottom: 40,
+    paddingTop: 15,
+    paddingBottom: 150,
   },
   coursesListWrapper: {
     paddingHorizontal: 16,
+    flex: 1,
   },
   singleCourse: {
     backgroundColor: '#fff',
