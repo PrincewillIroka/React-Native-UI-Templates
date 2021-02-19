@@ -75,7 +75,7 @@ export function Home({navigation}) {
   };
 
   const handleNavigation = (route, params) => {
-    navigation?.navigate('SingleStack', route, params);
+    navigation?.navigate('SingleStack', {screen: route, params});
   };
 
   const handleDrawer = () => {

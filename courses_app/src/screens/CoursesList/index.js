@@ -23,7 +23,7 @@ export function CoursesList({route, navigation}) {
   };
 
   const renderCourseList = ({item}) => {
-    return <CourseDetail courseDetail={item}/>;
+    return <CourseDetail courseDetail={item} />;
   };
 
   return (
