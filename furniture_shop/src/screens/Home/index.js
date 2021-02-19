@@ -20,11 +20,11 @@ export function Home() {
   const {state, dispatch} = useContext(AuthContext);
   const [data, setData] = useState({username: 'Kimberly'});
 
-  const renderFeaturedProducts = ({item, index}) => {
+  const renderFeaturedProducts = ({item}) => {
     return <FeaturedProduct furniture={item} />;
   };
 
-  const renderNewProducts = ({item, index}) => {
+  const renderNewProducts = ({item}) => {
     return <NewProduct furniture={item} />;
   };
 
@@ -85,7 +85,6 @@ export function Home() {
                   keyExtractor={(item, index) => shortid.generate()}
                   renderItem={renderNewProducts}
                   horizontal={true}
-                  // contentContainerStyle={styles.sectionScrollContainer}
                   showsHorizontalScrollIndicator={false}
                 />
               </View>
