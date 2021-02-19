@@ -32,4 +32,56 @@ export default state = {
       type: 'Dining set',
     },
   ],
+  newProducts: [
+    {
+      name: 'Gillett Coffee Table',
+      price: 173.99,
+      image:
+        'https://secure.img1-fg.wfcdn.com/im/02789782/resize-h700-w700%5Ecompr-r85/7975/79758618/Gillett+Coffee+Table.jpg',
+      description:
+        'The clean-lined contemporary design gets an industrial upgrade in this coffee table. Crafted of solid wood in a gently-distressed stain for a reclaimed look, this coffee table strikes a two-tiered rectangular silhouette on four black iron legs. The open lower shelf is perfect for stacking coffee table books or fanning out issues of your favorite magazines, while the tabletop provides a perfect platform for displaying trays of appetizers and drinks and your next get-together.',
+      quantity: 4,
+      type: 'Table',
+    },
+    {
+      name:
+        'Folding Sleeper Chair Convertible Lazy Chair Soft Pillow 3 Position With Bench',
+      price: 329.99,
+      image:
+        'https://secure.img1-fg.wfcdn.com/im/47638865/resize-h700-w700%5Ecompr-r85/1261/126162033/Folding+Sleeper++Chair+Convertible+Lazy+Chair+Soft+Pillow+3+Position+With+Bench.jpg',
+      description:
+        'This Is Our Brand New And Convertible Sleeper Chair, Which Is A Perfect Addition To Any Household That Wants Comfort And Convenience Without Giving Up A Ton Of Space. The Unique Folding Design Makes This Chair Easy To Transform. It Has Multiple Positions, Such As A Chair With Armrests or Chaise Lounge. Featuring Steel Construction, This Chair Can Retains Its Value Over The Long Term. A Pillow Comes As A Gift, Which You Can Use As A Pillow Or Cushion. You Can Put It In The Living Room, The Bedroom,balcony Or Even The Office.',
+      quantity: 4,
+      type: 'Chair',
+    },
+    {
+      name: 'Platform Bed',
+      price: 131.99,
+      image:
+        'https://secure.img1-fg.wfcdn.com/im/62947031/resize-h700-w700%5Ecompr-r85/6387/63873926/Platform+Bed.jpg',
+      description:
+        'Every mattress needs a foundation, and every master suite needs a focal point – that’s where the bed frame comes in! This design’s streamlined silhouette pairs with natural wood grain patterning to bring you a look that pairs well with boho-chic ensembles and eclectic modern spaces alike. Crafted from solid wood and metal, this piece uses a support leg and slat system to cradle your mattress as you sleep, eliminating the need to use a box spring.',
+      quantity: 4,
+      type: 'Bed',
+    },
+    {
+      name: 'Priceville Dining Hutch',
+      price: 697.57,
+      image:
+        'https://secure.img1-fg.wfcdn.com/im/10139243/resize-h700-w700%5Ecompr-r85/3206/32067457/Priceville+Dining+Hutch.jpg',
+      description:
+        'A great way to round out your living ensemble with much-needed storage, a china cabinet like this is a great option for storing everything from dining linens to wine. Crafted from a blend of solid and manufactured wood, this piece features four cabinets, three shelves, and three drawers on metal glides for abundant stowing space. A nine-bottle wine rack is included at the base of this piece, and the upper cabinets are glass-fronted for a classic look.',
+      quantity: 4,
+      type: 'Dining Set',
+    },
+    {
+      name: 'Currahee 72" Double Bathroom Vanity Set',
+      price: 1349.99,
+      image:
+        'https://secure.img1-fg.wfcdn.com/im/97610588/resize-h700-w700%5Ecompr-r85/1367/136705443/Currahee+72%2522+Double+Bathroom+Vanity+Set.jpg',
+      description: `Clean lines and plenty of drawer space make this classic double bathroom vanity the perfect piece for your bathroom or guest bath. It's 72" wide, the ideal size for sharing, and it's made from solid poplar wood in a neutral finish. The surface is crafted from stone in a carrara white color that complements your contemporary decor. And the two included undermount sinks with a rectangular silhouette are made from ceramic. Its six drawer fronts come with handles in a shiny finish, and they open up to reveal space for washcloths, toothpaste, and hair ties. And the four matching doors with sleek square knobs hide extra shelf space for hair dryers and bath towels. Plus, this bathroom vanity comes with a backsplash to help protect your walls.`,
+      quantity: 4,
+      type: 'Table',
+    },
+  ],
 };

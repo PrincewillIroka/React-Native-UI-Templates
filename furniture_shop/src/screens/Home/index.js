@@ -20,8 +20,12 @@ export function Home() {
   const {state, dispatch} = useContext(AuthContext);
   const [data, setData] = useState({username: 'Kimberly'});
 
-  const renderGridItem = ({item, index}) => {
+  const renderFeaturedProducts = ({item, index}) => {
     return <FeaturedProduct furniture={item} />;
+  };
+
+  const renderNewProducts = ({item, index}) => {
+    return <NewProduct furniture={item} />;
   };
 
   return (
@@ -65,7 +69,7 @@ export function Home() {
               <FlatList
                 data={state?.featuredProducts}
                 keyExtractor={(item, index) => shortid.generate()}
-                renderItem={renderGridItem}
+                renderItem={renderFeaturedProducts}
                 horizontal={true}
                 contentContainerStyle={styles.sectionScrollContainer}
                 showsHorizontalScrollIndicator={false}
@@ -76,7 +80,14 @@ export function Home() {
                 <Text style={styles.sectionHeaderText}>NEW PRODUCTS</Text>
               </View>
               <View style={styles.sectionContent}>
-                <NewProduct />
+                <FlatList
+                  data={state?.newProducts}
+                  keyExtractor={(item, index) => shortid.generate()}
+                  renderItem={renderNewProducts}
+                  horizontal={true}
+                  // contentContainerStyle={styles.sectionScrollContainer}
+                  showsHorizontalScrollIndicator={false}
+                />
               </View>
             </View>
           </View>
