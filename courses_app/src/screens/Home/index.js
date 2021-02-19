@@ -66,23 +66,31 @@ export function Home({navigation}) {
     } else if (index === 1) {
       displayedCategories = categories?.filter((category) => category.isTrendy);
     } else if (index === 2) {
-      displayedCategories = categories?.filter((category) => category.isBestRated);
+      displayedCategories = categories?.filter(
+        (category) => category.isBestRated,
+      );
     }
 
     setData({...data, activeTab, displayedCategories});
   };
 
   const handleNavigation = (route, params) => {
-    navigation?.navigate(route, params);
+    navigation?.navigate('SingleStack', route, params);
+  };
+
+  const handleDrawer = () => {
+    navigation?.openDrawer();
   };
 
   return (
     <View style={styles.homeContainer}>
       <View style={styles.homeContent}>
-        <View style={styles.headerContainer}>
+        <TouchableOpacity
+          style={styles.headerContainer}
+          onPress={() => handleDrawer()}>
           <Image source={FriesMenu} />
           <Image source={ProfilePhoto} style={styles.profilePhotoImage} />
-        </View>
+        </TouchableOpacity>
         <View style={styles.nameContainer}>
           <Text style={styles.nameText}>Hi</Text>
           <Text style={styles.usernameText}>{state?.username}</Text>
@@ -143,7 +151,9 @@ export function Home({navigation}) {
                   style={styles.illustrationImage}
                   imageStyle={styles.backgroundStyle}>
                   <View style={styles.transparentBg}>
-                    <Text style={styles.categoryTitletext}>{category?.title}</Text>
+                    <Text style={styles.categoryTitletext}>
+                      {category?.title}
+                    </Text>
                     <Text style={styles.categoryNumbertext}>
                       {category?.number}
                     </Text>
