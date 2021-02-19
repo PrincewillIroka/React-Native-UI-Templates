@@ -1,4 +1,4 @@
-# Course App
+# Courses App
 
 React-Native template/kit for Courses App
 
