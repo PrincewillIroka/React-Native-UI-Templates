@@ -14,7 +14,7 @@ This is part of my self embarked #100-React-Native-Apps-In-100-Days Challenge
 - Then run *yarn start* && *yarn android* in 2 separate terminals to run the app on an Android device. You could also run on iOS simulator too 
 
 ### Want to suggest a UI ?
-If you would love to suggest a UI for me to work on, you can create an issue and I'll consider it.
+If you would love to suggest a UI for me to work on, you can message me on **[Twitter](https://twitter.com/PrincewillIroka)** and I'll consider it.
 
 ### Screenshots
 
