@@ -102,23 +102,23 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
-  courseContainer: {
+  categoryContainer: {
     width: '43%',
     borderRadius: 12,
     marginBottom: 30,
   },
-  courseShortHeight: {
+  categoryShortHeight: {
     height: 160,
   },
-  courseLongHeight: {
+  categoryLongHeight: {
     height: 200,
   },
-  courseTitletext: {
+  categoryTitletext: {
     fontWeight: 'bold',
     fontSize: 16,
     opacity: 0.9,
   },
-  courseNumbertext: {
+  categoryNumbertext: {
     fontSize: 13,
   },
   illustrationImage: {

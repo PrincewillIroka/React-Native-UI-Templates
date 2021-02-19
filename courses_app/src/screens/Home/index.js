@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {
   View,
   Text,
@@ -15,59 +15,61 @@ import styles from './homeStyle.js';
 import FriesMenu from '../../assets/icons/FriesMenu.png';
 import ProfilePhoto from '../../assets/photos/photo-1494790108377-be9c29b29330.jpg';
 import {getIllustration, getBackground} from '../../utils';
+import {AuthContext} from '../../context';
+
+const categories = [
+  {
+    id: 0,
+    title: 'UX Design',
+    number: 36,
+    isTrendy: false,
+    isBestRated: true,
+  },
+  {
+    id: 1,
+    title: 'Photoshop',
+    number: 22,
+    isTrendy: true,
+    isBestRated: true,
+  },
+  {
+    id: 2,
+    title: 'Illustrator',
+    number: 40,
+    isTrendy: true,
+    isBestRated: false,
+  },
+  {
+    id: 3,
+    title: 'Development',
+    number: 55,
+    isTrendy: true,
+    isBestRated: true,
+  },
+];
 
 export function Home({navigation}) {
-  const courses = [
-    {
-      id: 0,
-      title: 'UX Design',
-      number: 36,
-      isTrendy: false,
-      isBestRated: true,
-    },
-    {
-      id: 1,
-      title: 'Photoshop',
-      number: 22,
-      isTrendy: true,
-      isBestRated: true,
-    },
-    {
-      id: 2,
-      title: 'Illustrator',
-      number: 40,
-      isTrendy: true,
-      isBestRated: false,
-    },
-    {
-      id: 3,
-      title: 'Development',
-      number: 55,
-      isTrendy: true,
-      isBestRated: true,
-    },
-  ];
+  const {state, dispatch} = useContext(AuthContext);
 
-  const [state, setState] = useState({
-    username: 'Georgina',
+  const [data, setData] = useState({
     tabs: ['New', 'Trendy', 'Best rated'],
     activeTab: 'New',
-    displayedCourses: courses,
+    displayedCategories: categories,
   });
 
   const handleTabPress = (tab, index) => {
-    let {activeTab, displayedCourses} = state;
+    let {activeTab, displayedCategories} = data;
     activeTab = tab;
 
     if (index === 0) {
-      displayedCourses = courses;
+      displayedCategories = categories;
     } else if (index === 1) {
-      displayedCourses = courses?.filter((course) => course.isTrendy);
+      displayedCategories = categories?.filter((category) => category.isTrendy);
     } else if (index === 2) {
-      displayedCourses = courses?.filter((course) => course.isBestRated);
+      displayedCategories = categories?.filter((category) => category.isBestRated);
     }
 
-    setState({...state, activeTab, displayedCourses});
+    setData({...data, activeTab, displayedCategories});
   };
 
   const handleNavigation = (route, params) => {
@@ -101,7 +103,7 @@ export function Home({navigation}) {
           </TouchableOpacity>
         </View>
         <View style={styles.tabHeaderContainer}>
-          {state?.tabs?.map((tab, index) => (
+          {data?.tabs?.map((tab, index) => (
             <TouchableOpacity
               key={shortid.generate()}
               style={styles.singleTab}
@@ -109,13 +111,13 @@ export function Home({navigation}) {
               <Text
                 style={[
                   styles.tabText,
-                  state?.activeTab === tab
+                  data?.activeTab === tab
                     ? styles.activeTabText
                     : styles.inActiveTabText,
                 ]}>
                 {tab}
               </Text>
-              {state?.activeTab === tab ? (
+              {data?.activeTab === tab ? (
                 <View style={styles.activeTabBottom}></View>
               ) : null}
             </TouchableOpacity>
@@ -125,25 +127,25 @@ export function Home({navigation}) {
           style={styles.scrollViewContent}
           showsVerticalScrollIndicator={false}>
           <View style={styles.tabBodyContainer}>
-            {state?.displayedCourses?.map((course, index) => (
+            {data?.displayedCategories?.map((category, index) => (
               <TouchableOpacity
                 key={shortid.generate()}
                 style={[
-                  styles.courseContainer,
+                  styles.categoryContainer,
                   index % 2
-                    ? styles.courseLongHeight
-                    : styles.courseShortHeight,
-                  getBackground(course?.id),
+                    ? styles.categoryLongHeight
+                    : styles.categoryShortHeight,
+                  getBackground(category?.id),
                 ]}
-                onPress={() => handleNavigation('CoursesList', course)}>
+                onPress={() => handleNavigation('CoursesList', category)}>
                 <ImageBackground
-                  source={getIllustration(course?.id)}
+                  source={getIllustration(category?.id)}
                   style={styles.illustrationImage}
                   imageStyle={styles.backgroundStyle}>
                   <View style={styles.transparentBg}>
-                    <Text style={styles.courseTitletext}>{course?.title}</Text>
-                    <Text style={styles.courseNumbertext}>
-                      {course?.number}
+                    <Text style={styles.categoryTitletext}>{category?.title}</Text>
+                    <Text style={styles.categoryNumbertext}>
+                      {category?.number}
                     </Text>
                   </View>
                 </ImageBackground>

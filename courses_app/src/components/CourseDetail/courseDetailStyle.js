@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   },
   sectionScrollContainer: {
     paddingHorizontal: 16,
-    paddingBottom: 60
+    paddingBottom: 60,
   },
 });
 
