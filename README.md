@@ -1,12 +1,12 @@
-# ReactNative-UI-Templates
+# React-Native-UI-Templates
 
-ReactNative templates/kits for different types of apps
+React-Native templates/kits for different types of apps
 
 The templates are based on open source UI designs.
 Feel free to use any of these templates as a starter/guide for your own app.
 
 ###
-This is part of my self embarked #100-ReactNative-Apps-In-100-Days Challenge
+This is part of my self embarked #100-React-Native-Apps-In-100-Days Challenge
 - Each app in this challenge will have at least 2 screens and will integrate some level of API logic. Either using store data with the Hooks API or some network request to an online API (REST/GraphQL)
 
 ### Usage and Setup

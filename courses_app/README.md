@@ -1,6 +1,6 @@
 # Course App
 
-ReactNative template/kit for Courses App
+React-Native template/kit for Courses App
 
 ### Screenshots
 
