@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   furniturePrice: {
-    opacity: 0.9,
+    opacity: 0.7,
     fontSize: 13
   },
   addToCartBtn: {
