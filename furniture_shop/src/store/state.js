@@ -2,6 +2,7 @@ export default state = {
   cart: [],
   featuredProducts: [
     {
+      id: 'A233334',
       name: 'Velvet Dining Side',
       price: 183.99,
       image:
@@ -12,6 +13,7 @@ export default state = {
       type: 'Chair',
     },
     {
+      id: 'B128765',
       name: 'Carone Tufted Velvet Upholstered Side Chair in Blue (Set of 4)',
       price: 559.99,
       image:
@@ -22,6 +24,7 @@ export default state = {
       type: 'Chair',
     },
     {
+      id: 'C095621',
       name: 'Schacht Upholstered Dining Chair (Set of 2)',
       price: 449.99,
       image:
@@ -34,6 +37,7 @@ export default state = {
   ],
   newProducts: [
     {
+      id: 'A103765',
       name: 'Gillett Coffee Table',
       price: 173.99,
       image:
@@ -44,6 +48,7 @@ export default state = {
       type: 'Table',
     },
     {
+      id: 'E765432',
       name: 'Currahee 72" Double Bathroom Vanity Set',
       price: 1349.99,
       image:
@@ -53,6 +58,7 @@ export default state = {
       type: 'Table',
     },
     {
+      id: 'N452178',
       name: 'Priceville Dining Hutch',
       price: 697.57,
       image:
@@ -63,6 +69,7 @@ export default state = {
       type: 'Dining Set',
     },
     {
+      id: 'X986543',
       name:
         'Folding Sleeper Chair Convertible Lazy Chair Soft Pillow 3 Position With Bench',
       price: 329.99,
@@ -74,6 +81,7 @@ export default state = {
       type: 'Chair',
     },
     {
+      id: 'D543098',
       name: 'Platform Bed',
       price: 131.99,
       image:

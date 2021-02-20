@@ -22,6 +22,22 @@ export function ProductDetail({route, navigation}) {
     navigation?.goBack();
   };
 
+  const handleNoInCart = (type) => {
+    dispatch({
+      type: 'addToCart',
+      payload: {furniture, type},
+    });
+  };
+
+  const getProductNoInCart = () => {
+    let quantity = 0;
+    let product = state?.cart?.find((item) => item.id === furniture.id);
+    if (product) {
+      quantity = product?.noInCart;
+    }
+    return quantity;
+  };
+
   return (
     <KeyboardAvoidingView style={styles.productDetailContainer}>
       <View style={styles.productDetailContent}>
@@ -65,15 +81,25 @@ export function ProductDetail({route, navigation}) {
             </View>
             <Text style={styles.productTitleText}>Quantity</Text>
             <View style={styles.productQuantityRow}>
-              <Entypo name="minus" size={23} color="#000" />
-              <Text style={styles.productQuantityValue}>4</Text>
-              <Entypo name="plus" size={23} color="#000" />
+              <TouchableOpacity onPress={() => handleNoInCart('subtract')}>
+                <Entypo name="minus" size={23} color="#000" />
+              </TouchableOpacity>
+              <Text style={styles.productQuantityValue}>
+                {getProductNoInCart()}
+              </Text>
+              <TouchableOpacity onPress={() => handleNoInCart('add')}>
+                <Entypo name="plus" size={23} color="#000" />
+              </TouchableOpacity>
             </View>
             <Text style={styles.productTitleText}>Description</Text>
-            <Text style={styles.productDescription}>{furniture?.description}</Text>
+            <Text style={styles.productDescription}>
+              {furniture?.description}
+            </Text>
           </View>
         </ScrollView>
-        <TouchableOpacity style={styles.addToCartBtn}>
+        <TouchableOpacity
+          style={styles.addToCartBtn}
+          onPress={() => handleNoInCart('add')}>
           <Entypo name="plus" size={25} color="#fff" />
           <Text style={styles.addToCartText}>Add to cart</Text>
         </TouchableOpacity>

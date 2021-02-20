@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   noInCartText: {
     position: 'absolute',
     top: 2,
-    right: 15,
+    right: 14,
     fontSize: 20,
     color: '#B48B49',
     fontWeight:"bold"
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   sectionHeaderLeftText: {
-    color: '#D1D1D1',
+    color: '#a7a7a7',
     marginRight: 5,
   },
   sectionScrollContainer: {

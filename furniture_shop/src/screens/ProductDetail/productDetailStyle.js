@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   productDetailCircleContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: '#fafafa',
     height: 50,
     width: 50,
     borderRadius: 50,
@@ -29,10 +29,11 @@ const styles = StyleSheet.create({
   noInCartText: {
     position: 'absolute',
     top: 2,
-    right: 15,
+    right: 14,
     fontSize: 20,
     color: '#B48B49',
     fontWeight: 'bold',
+    zIndex: 10
   },
   productDetailSection: {
     paddingBottom: 50,
