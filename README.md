@@ -22,7 +22,7 @@ If you would love to suggest a UI for me to work on, you can message me on **[Tw
 
 ![Courses App](https://imgur.com/0SwpgSK.png)
 
-1. **[Furniture Shop UI Template](https://github.com/PrincewillIroka/React-Native-UI-Templates/tree/main/furniture_shop)**
+2. **[Furniture Shop UI Template](https://github.com/PrincewillIroka/React-Native-UI-Templates/tree/main/furniture_shop)**
 
 ![Furniture Shop](https://imgur.com/9AAcro8.png)
 
