@@ -16,16 +16,30 @@ import styles from './homeStyle.js';
 import {FeaturedProduct, NewProduct} from '../../components';
 import {AuthContext} from '../../context';
 
-export function Home() {
+export function Home({navigation}) {
   const {state, dispatch} = useContext(AuthContext);
   const [data, setData] = useState({username: 'Kimberly'});
 
+  const handleNavigation = (route, params) => {
+    navigation?.navigate(route, params);
+  };
+
   const renderFeaturedProducts = ({item}) => {
-    return <FeaturedProduct furniture={item} />;
+    return (
+      <FeaturedProduct
+        furniture={item}
+        onNavigate={(route, params) => handleNavigation(route, params)}
+      />
+    );
   };
 
   const renderNewProducts = ({item}) => {
-    return <NewProduct furniture={item} />;
+    return (
+      <NewProduct
+        furniture={item}
+        onNavigate={(route, params) => handleNavigation(route, params)}
+      />
+    );
   };
 
   return (
@@ -39,7 +53,7 @@ export function Home() {
             <MaterialCommunityIcons
               name="cart-outline"
               size={20}
-              color="#D7D2CE"
+              color="#333333"
             />
             <Text style={styles.noInCartText}>{state?.cart?.length}</Text>
           </TouchableOpacity>
@@ -47,7 +61,7 @@ export function Home() {
         <Text style={styles.greetingText}>Hello, {data?.username}</Text>
         <Text style={styles.chooseText}>Choose Your Furniture!</Text>
         <View style={styles.searchContainer}>
-          <Ionicons name="search" size={20} color="#D7D2CE" />
+          <Ionicons name="search" size={20} color="#333333" />
           <TextInput placeholder="Search" style={styles.searchInput} />
         </View>
         <ScrollView

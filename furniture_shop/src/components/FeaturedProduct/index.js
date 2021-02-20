@@ -3,10 +3,12 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from './featuredProductStyle.js';
 
-export function FeaturedProduct({furniture}) {
+export function FeaturedProduct({furniture, onNavigate}) {
   return (
     <View style={styles.furnitureContainer}>
-      <Image source={{uri: furniture?.image}} style={styles.furnitureImage} />
+      <TouchableOpacity onPress={() => onNavigate('ProductDetail', furniture)}>
+        <Image source={{uri: furniture?.image}} style={styles.furnitureImage} />
+      </TouchableOpacity>
       <Text numberOfLines={1} ellipsizeMode="tail" style={styles.furnitureName}>
         {furniture?.name}
       </Text>

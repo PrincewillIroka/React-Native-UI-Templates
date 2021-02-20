@@ -10,10 +10,14 @@ const styles = StyleSheet.create({
     marginRight: Dimensions.get('window').width / 20,
     height: 130,
   },
-  furnitureImage: {
+  furnitureImageWrapper: {
     height: '80%',
     width: '100%',
     marginBottom: 5,
+  },
+  furnitureImage: {
+    height: '100%',
+    width: '100%',
     borderRadius: 15,
   },
   furnitureName: {
@@ -21,7 +25,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     opacity: 0.6,
     textAlign: 'center',
-    fontSize: 12
+    fontSize: 12,
   },
 });
 
