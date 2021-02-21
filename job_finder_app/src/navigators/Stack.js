@@ -1,9 +1,17 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import {Home, JobDetail, Bookmarks} from '../screens';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Foundation from 'react-native-vector-icons/Foundation';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {
+  Home,
+  JobDetail,
+  Bookmarks,
+  Settings,
+  Notifications,
+  Messages,
+} from '../screens';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -15,20 +23,64 @@ const TabStack = () => {
         name="Home"
         component={Home}
         options={{
-          title: 'Home',
           tabBarIcon: ({tintColor}) => (
-            <AntDesign name="home" color="#ccc" size={25} />
+            <Foundation name="home" color="#ccc" size={24} />
           ),
+          tabBarLabel: () => {
+            return null;
+          },
         }}
       />
       <Tab.Screen
         name="Bookmarks"
         component={Bookmarks}
         options={{
-          title: 'Bookmarks',
           tabBarIcon: ({tintColor}) => (
-            <FontAwesome name="bookmark" color="#ccc" size={25} />
+            <Ionicons name="ios-bookmarks" color="#ccc" size={20} />
           ),
+          tabBarLabel: () => {
+            return null;
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Messages"
+        component={Messages}
+        options={{
+          tabBarIcon: ({tintColor}) => (
+            <MaterialCommunityIcons
+              name="message-text"
+              color="#ccc"
+              size={24}
+            />
+          ),
+          tabBarLabel: () => {
+            return null;
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Notifications"
+        component={Notifications}
+        options={{
+          tabBarIcon: ({tintColor}) => (
+            <Ionicons name="ios-notifications" color="#ccc" size={24} />
+          ),
+          tabBarLabel: () => {
+            return null;
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Settings"
+        component={Settings}
+        options={{
+          tabBarIcon: ({tintColor}) => (
+            <Ionicons name="settings-sharp" color="#ccc" size={24} />
+          ),
+          tabBarLabel: () => {
+            return null;
+          },
         }}
       />
     </Tab.Navigator>
