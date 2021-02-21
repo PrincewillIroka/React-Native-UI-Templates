@@ -15,17 +15,13 @@ import styles from './homeStyle.js';
 import {AuthContext} from '../../context';
 import {Category, Job} from '../../components';
 
-export function Home() {
+export function Home({navigation}) {
   const {state, dispatch} = useContext(AuthContext);
   const [data, setData] = useState({
     username: 'Shola',
     photo:
       'https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   });
-
-  const handleNavigation = (route, params) => {
-    navigation?.navigate(route, params);
-  };
 
   const renderCategory = ({item}) => {
     return <Category category={item} />;
@@ -35,7 +31,7 @@ export function Home() {
     return (
       <Job
         job={item}
-        onNavigate={(route, params) => handleNavigation(route, params)}
+        navigation={navigation}
       />
     );
   };

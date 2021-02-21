@@ -27,7 +27,7 @@ export default state = {
         logo:
           'https://1000logos.net/wp-content/uploads/2017/08/Spotify-Logo.png',
       },
-      role: 'UI Designer',
+      role: 'Senior UI Designer',
       salary: '$50/hr',
       location: 'Remote',
     },

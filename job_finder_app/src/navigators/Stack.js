@@ -23,8 +23,12 @@ const TabStack = () => {
         name="Home"
         component={Home}
         options={{
-          tabBarIcon: ({tintColor}) => (
-            <Foundation name="home" color="#ccc" size={24} />
+          tabBarIcon: ({focused, tintColor}) => (
+            <Foundation
+              name="home"
+              color={focused ? '#49AC5A' : '#ccc'}
+              size={24}
+            />
           ),
           tabBarLabel: () => {
             return null;
@@ -35,8 +39,12 @@ const TabStack = () => {
         name="Bookmarks"
         component={Bookmarks}
         options={{
-          tabBarIcon: ({tintColor}) => (
-            <Ionicons name="ios-bookmarks" color="#ccc" size={20} />
+          tabBarIcon: ({focused, tintColor}) => (
+            <Ionicons
+              name="ios-bookmarks"
+              color={focused ? '#49AC5A' : '#ccc'}
+              size={20}
+            />
           ),
           tabBarLabel: () => {
             return null;
@@ -47,10 +55,10 @@ const TabStack = () => {
         name="Messages"
         component={Messages}
         options={{
-          tabBarIcon: ({tintColor}) => (
+          tabBarIcon: ({focused, tintColor}) => (
             <MaterialCommunityIcons
               name="message-text"
-              color="#ccc"
+              color={focused ? '#49AC5A' : '#ccc'}
               size={24}
             />
           ),
@@ -63,8 +71,12 @@ const TabStack = () => {
         name="Notifications"
         component={Notifications}
         options={{
-          tabBarIcon: ({tintColor}) => (
-            <Ionicons name="ios-notifications" color="#ccc" size={24} />
+          tabBarIcon: ({focused, tintColor}) => (
+            <Ionicons
+              name="ios-notifications"
+              color={focused ? '#49AC5A' : '#ccc'}
+              size={24}
+            />
           ),
           tabBarLabel: () => {
             return null;
@@ -75,8 +87,12 @@ const TabStack = () => {
         name="Settings"
         component={Settings}
         options={{
-          tabBarIcon: ({tintColor}) => (
-            <Ionicons name="settings-sharp" color="#ccc" size={24} />
+          tabBarIcon: ({focused, tintColor}) => (
+            <Ionicons
+              name="settings-sharp"
+              color={focused ? '#49AC5A' : '#ccc'}
+              size={24}
+            />
           ),
           tabBarLabel: () => {
             return null;
