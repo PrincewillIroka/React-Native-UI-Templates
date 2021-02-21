@@ -26,6 +26,8 @@ If you would love to suggest a UI for me to work on, you can message me on **[Tw
 
 ![Furniture Shop](https://imgur.com/9AAcro8.png)
 
-
+###
+Note
+All information/assets used in these templates are for demo purposes.
 
 This project is licensed under the terms of the [MIT license.]https://github.com/PrincewillIroka/React-Native-UI-Templates/blob/main/LICENSE)
