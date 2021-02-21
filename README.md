@@ -26,6 +26,10 @@ If you would love to suggest a UI for me to work on, you can message me on **[Tw
 
 ![Furniture Shop](https://imgur.com/9AAcro8.png)
 
+3. **[Job Finder App Template](https://github.com/PrincewillIroka/React-Native-UI-Templates/tree/main/job_finder_app)**
+
+![Job Finder App](https://imgur.com/k97p2rx.png)
+
 ###
 Note
 All information/assets used in these templates are for demo purposes.
