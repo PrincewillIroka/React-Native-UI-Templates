@@ -12,6 +12,9 @@ Feel free to use any of these templates as a starter/guide for your own app.
 ### Want to suggest a UI ?
 If you would love to suggest a UI for me to work on, you can message me on **[Twitter](https://twitter.com/PrincewillIroka)** and I'll consider it.
 
+### Want to support? Buy me a coffee
+<a href="https://www.buymeacoffee.com/princewilliroka"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=xPGLYEr&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
+
 ### Screenshots
 
 1. **[Courses App UI Template](https://github.com/PrincewillIroka/React-Native-UI-Templates/tree/main/courses_app)**
